@@ -132,9 +132,9 @@ grunt-delete-comments divides comments into these categories:
 
 *delimited* comments are marked by starting and ending character sequences.
 
-In JavaScript and CSS, the starting delimiter is `/*` and the ending delimiter is `*/`. In HTML, the starting delimiter is `/<!--` and the ending delimiter is `-->`.
+In JavaScript and CSS, the starting delimiter is `/*` and the ending delimiter is `*/`. In HTML, the starting delimiter is `<!--` and the ending delimiter is `-->`.
 
-In the following example, a delimited comment is used to comment-out an altrernative value for the assignment statement: `/* 10 */`
+In the following example, a delimited comment is used to comment-out an alternative value for the assignment statement: `/* 10 */`
 
 ````js
 const foo = /* 10 */ 11;
@@ -207,44 +207,44 @@ When a special comment is the first non-space, non-tab text on a line, it is con
 Please read the [Comment Types](#comment-types) section which defines the comment types: delimited, delimitedLines, lineEnd, line, special, and specialLines.
 
 #### options.delimited
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `true`
 
 Determines whether or not to remove delimited comments.
 
 
 #### options.delimitedLines
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `true`
 
 Determines whether or not to remove delimitedLines comments.
 
 #### options.lineEnd
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `true`
 
 Determines whether or not to remove lineEnd comments.
 
 #### options.line
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `true`
 
 Determines whether or not to remove line comments.
 
 #### options.special
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `false`
 
 Determines whether or not to remove special comments.
 
 #### options.specialLines
-Type: `Boolean`
+Type: `Boolean`<br />
 Default value: `false`
 
 Determines whether or not to remove specialLines comments.
 
 #### options.language
-Type: `String`
+Type: `String`<br />
 Default value: `''`
 
 Determines the syntax rules to use when searching for comments.
@@ -256,6 +256,8 @@ Specify the language option only when you want to force grunt-delete-comments to
 ### Advanced Options
 
 #### options.aliases
+Type: `Object`<br />
+Default value: *none*
 
 Use the aliases option to define file extensions you want to map to a [type definition](#options.types).
 
@@ -284,6 +286,8 @@ options {
 ````
 
 #### options.types
+Type: `Object`<br />
+Default value: *none*
 
 Use the types option to define comment delimiters for an unsupported file extension.
 
