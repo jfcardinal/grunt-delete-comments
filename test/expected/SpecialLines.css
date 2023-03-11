@@ -1,0 +1,21 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* This is a comment. All CSS comments are multi-line, even when on a single line. */
+/* Or, when not.
+
+*/
+
+h1 {
+  font-size: /* 1.5rem */ 1.4rem;
+}
+
+// This is invalid CSS, but we'll keep it because we don't remove
+// single-line comments in CSS files.
+
+h2 {
+  margin-top: 0;
+}
