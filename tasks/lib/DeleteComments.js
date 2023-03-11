@@ -33,7 +33,7 @@ const kBuiltInTypes = {
 const kBuiltInAliases = {
   htm: 'html',
   less: 'css',
-  ts: 'ts',
+  ts: 'js',
 }
 
 const kDefaultOptions = {

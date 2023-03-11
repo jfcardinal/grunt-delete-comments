@@ -108,7 +108,7 @@ grunt.initConfig({
 
 Typically, you will add the delete_comments task to one or more other registered tasks.
 
-For example, here is the tasks section of a Gruntfile where the default task copies some files and then removes comments from some the files specified in the target(s):
+For example, here is the tasks section of a Gruntfile where the default task copies some files and then removes comments from some of the files specified in the target(s):
 
 ```js
 grunt.loadNpmTasks('grunt-contrib-copy');
@@ -280,7 +280,7 @@ options {
   aliases: {
     htm: 'html',
     less: 'css',
-    ts: 'ts',
+    ts: 'js',
   }
 }
 ````
