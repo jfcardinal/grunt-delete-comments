@@ -26,6 +26,11 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-mocha-test": "^0.13.3"
   },
+  "files": [
+    "LICENSE",
+    "ReadMe.md",
+    "tasks/"
+  ],
   "keywords": [
     "grunt",
     "gruntplugin",
