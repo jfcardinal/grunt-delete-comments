@@ -97,6 +97,13 @@ function subtract(x, y) { return x - y }
     const actual = deleteComments(input, {})
     assert.equal(actual, expected, 'Not equal')
   })
+
+  it('Remove comments before and after RegEx with character class', () => {
+    const input = '/* remove */ const re = /(["\']+)/g // Remove'
+    const expected = ' const re = /(["\']+)/g'
+    const actual = deleteComments(input, {})
+    assert.equal(actual, expected, 'Not equal')
+  })
 })
 
 describe('Grunt Single Files', () => {
