@@ -377,20 +377,19 @@ class Lexer {
     tp.moveAhead()
     while (!tp.eof) {
       const c = tp.peek()
-      if (c === '\\') {
-        tp.moveAhead(2)
-        continue
-      }
-      if (c === '[') {
-        inCC = true
-        continue
-      }
-      if (c === ']') {
-        inCC = false
-        continue
+      if (!inCC && c === '/') break
+      switch (c) {
+        case '\\':
+          tp.moveAhead()
+          break;
+        case '[':
+          inCC = true
+          break
+        case ']':
+          inCC = false
+          break
       }
       tp.moveAhead()
-      if (!inCC && tp.peek() === '/') break
     }
   }
 }
