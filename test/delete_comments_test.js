@@ -104,6 +104,20 @@ function subtract(x, y) { return x - y }
     const actual = deleteComments(input, {})
     assert.equal(actual, expected, 'Not equal')
   })
+
+  it('Detect RegEx after "!" operator', () => {
+    const input = 'if (!/\\/search_queries\\//i.test(window.location.href)) return false // Comment'
+    const expected = 'if (!/\\/search_queries\\//i.test(window.location.href)) return false'
+    const actual = deleteComments(input, {})
+    assert.equal(actual, expected, 'Not equal')
+  })
+
+  it('Detect RegEx in return statement', () => {
+    const input = 'return /[abc]/.text(s) // Comment'
+    const expected = 'return /[abc]/.text(s)'
+    const actual = deleteComments(input, {})
+    assert.equal(actual, expected, 'Not equal')
+  })
 })
 
 describe('Grunt Single Files', () => {

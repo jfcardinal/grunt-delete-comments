@@ -336,7 +336,7 @@ class Lexer {
     const reIndex = []
     if (!this._regex) return reIndex
 
-    const re = /(?:^|[=,:(][ \t]*)\/(?:(?![*+?])(?:[^\r\n[/\\]|\\.|\[(?:[^\r\n\]\\]|\\.)*\])+)\/(?:(?:g(?:im?|mi?)?|i(?:gm?|mg?)?|m(?:gi?|ig?)?)?)/gm
+    const re = /(?:^|[=,:(! ][ \t]*)\/(?:(?![*+?])(?:[^\r\n[/\\]|\\.|\[(?:[^\r\n\]\\]|\\.)*\])+)\/(?:(?:g(?:im?|mi?)?|i(?:gm?|mg?)?|m(?:gi?|ig?)?)?)/gm
     const matches = this._text.matchAll(re)
     for (const match of matches) {
       let index = match.index
